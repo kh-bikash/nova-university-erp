@@ -1,8 +1,9 @@
 # 🎓 Nova University ERP
 
 <p align="center">
-  <img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" width="700" />
+  <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1600&auto=format&fit=crop" width="800" />
 </p>
+
 
 <p align="center">
   <b>Next-Generation University Management System</b><br/>
