@@ -7,7 +7,15 @@ const SALT_ROUNDS = 10
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, password, full_name, role, adminSecret } = await request.json()
+    const body = await request.json()
+
+    const email = body.email
+    const password = body.password
+    const full_name = body.full_name
+    const role = String(body.role || '').toLowerCase().trim()
+    const adminSecret = body.adminSecret
+    console.log('[SIGNUP] role received:', role)
+
 
     if (!email || !password || !full_name || !role) {
       return NextResponse.json({ error: 'All fields are required' }, { status: 400 })
