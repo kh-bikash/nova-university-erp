@@ -1,0 +1,12 @@
+Verifying Database Content...
+
+Connected to: {"current_database":"kl_erp_db","current_user":"kluniversity","inet_server_addr":"::1","inet_server_port":5432}
+
+Tables: course_enrollment, users, students, faculty, departments, timetable, courses, attendance, grades, leave_requests, fees, fee_payments, hostels, hostel_rooms, hostel_allocations, hostel_complaints, extra_services, student_services, admin_logs, timetables, companies, job_postings, maintenance_tickets, job_applications, infrastructure_assets, transport_routes, transport_stops, student_transport, service_requests, library_transactions, library_books, exams, exam_results
+
+Courses Found: 2
+ - [9143a2a1-dafc-4387-8410-0194f91e1b4d] CS401: Advanced Algorithms (Dept: 6a1c8bbc-70c0-4e5b-97ad-a4867a96474e)
+ - [05d73f4b-c3b4-4dba-994a-8783e5ed480e] CS405: Advanced OOPS (Dept: 6a1c8bbc-70c0-4e5b-97ad-a4867a96474e)
+
+Departments Found: 1
+ - [6a1c8bbc-70c0-4e5b-97ad-a4867a96474e] Computer Science
