@@ -1,3 +1,4 @@
+export { dynamic, fetchCache, revalidate } from "@/app/api/_config";
 import { NextResponse, type NextRequest } from 'next/server'
 import { verifyToken } from '@/lib/auth'
 import { query } from '@/lib/db'
