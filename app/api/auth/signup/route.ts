@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { hash } from 'bcryptjs'
 import { query } from '@/lib/db'
-import { signToken } from '@/lib/auth'
+import { signToken, generateRefreshToken } from '@/lib/auth'
 
 const SALT_ROUNDS = 10
 
@@ -64,14 +64,27 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const token = signToken({ id: user.id, role: user.role })
+    const accessToken = signToken({ id: user.id, role: user.role })
+    const refreshToken = await generateRefreshToken(user.id)
 
     const response = NextResponse.json(user, { status: 201 })
-    response.cookies.set('auth-token', token, {
+
+    // Set Access Token Cookie
+    response.cookies.set('auth-token', accessToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
-      maxAge: 60 * 60 * 24 * 7,
+      maxAge: 60 * 15, // 15 minutes
+      path: '/',
+    })
+
+    // Set Refresh Token Cookie
+    response.cookies.set('refresh-token', refreshToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 60 * 60 * 24 * 7, // 7 days
+      path: '/',
     })
 
     return response

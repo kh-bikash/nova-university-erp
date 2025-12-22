@@ -10,7 +10,12 @@ if (!connectionString) {
 let pool: Pool
 
 if (process.env.NODE_ENV === 'production') {
-  pool = new Pool({ connectionString })
+  pool = new Pool({
+    connectionString,
+    ssl: {
+      rejectUnauthorized: false // Required for some Vercel/Supabase setups
+    }
+  })
 } else {
   // In development, use a global variable so the pool isn't re-created on every hot reload
   if (!(global as any).postgres) {
