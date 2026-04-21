@@ -1,4 +1,4 @@
-# Database setup (KL University ERP)
+# Database setup (Nova University ERP)
 
 ## Environment
 

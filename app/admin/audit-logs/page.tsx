@@ -26,7 +26,7 @@ const mockLogs: AuditLog[] = [
   {
     id: "1",
     timestamp: "2024-11-20 14:30:22",
-    user: "admin@kluniversity.edu",
+    user: "admin@novauniversity.edu",
     action: "CREATE",
     entity: "Department",
     entity_id: "CS-001",
@@ -37,7 +37,7 @@ const mockLogs: AuditLog[] = [
   {
     id: "2",
     timestamp: "2024-11-20 14:25:15",
-    user: "rajesh.kumar@kluniversity.edu",
+    user: "rajesh.kumar@novauniversity.edu",
     action: "UPDATE",
     entity: "Student",
     entity_id: "STU-2024-0001",
@@ -48,7 +48,7 @@ const mockLogs: AuditLog[] = [
   {
     id: "3",
     timestamp: "2024-11-20 14:10:00",
-    user: "priya.sharma@kluniversity.edu",
+    user: "priya.sharma@novauniversity.edu",
     action: "DELETE",
     entity: "Course",
     entity_id: "CSE-401",
@@ -59,7 +59,7 @@ const mockLogs: AuditLog[] = [
   {
     id: "4",
     timestamp: "2024-11-20 13:45:30",
-    user: "student123@kluniversity.edu",
+    user: "student123@novauniversity.edu",
     action: "LOGIN_FAILED",
     entity: "User",
     entity_id: "STU-123",

@@ -1,4 +1,4 @@
-# Setup PostgreSQL database for KL University ERP
+# Setup PostgreSQL database for Nova University ERP
 
 $psqlPath = "C:\Program Files\PostgreSQL\17\bin\psql"
 $pgUser = "postgres"

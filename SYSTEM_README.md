@@ -1,7 +1,7 @@
-# KL University ERP System - Final Product
+# Nova University ERP System - Final Product
 
 ## System Overview
-A comprehensive, enterprise-grade University ERP system built for KL University supporting 10,000+ students, multiple departments, and all university operations.
+A comprehensive, enterprise-grade University ERP system built for Nova University supporting 10,000+ students, multiple departments, and all university operations.
 
 ## Key Features Implemented
 
@@ -265,7 +265,7 @@ npm start
 
 ### Demo Credentials
 Use any email/password combination for testing:
-- Email: `test@kluniversity.edu`
+- Email: `test@novauniversity.edu`
 - Password: `password123`
 
 ## Features Highlights

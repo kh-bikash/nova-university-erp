@@ -122,10 +122,10 @@ export function Sidebar() {
       <div className="p-6 border-b border-sidebar-border">
         <Link href="/dashboard" className="flex items-center gap-3">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">KL</span>
+            <span className="text-primary-foreground font-bold text-sm">NU</span>
           </div>
           <div>
-            <h1 className="font-bold text-lg leading-none">KL University</h1>
+            <h1 className="font-bold text-lg leading-none">Nova University</h1>
             <p className="text-xs text-muted-foreground mt-1">ERP System</p>
           </div>
         </Link>

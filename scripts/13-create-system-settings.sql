@@ -11,6 +11,6 @@ VALUES
   ('current_academic_year', '2023-2024', 'Current Academic Year'),
   ('current_semester', '1', 'Current Semester (1-8)'),
   ('registration_open', 'true', 'Is course registration open?'),
-  ('university_name', 'KL University', 'Name of the University'),
+  ('university_name', 'Nova University', 'Name of the University'),
   ('contact_email', 'admin@kl.edu.in', 'System Contact Email')
 ON CONFLICT (key) DO NOTHING;

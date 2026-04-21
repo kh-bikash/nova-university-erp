@@ -96,7 +96,7 @@ function MarksheetContent() {
       <Card className="p-12 border border-border/50 bg-white text-black space-y-8">
         {/* Header */}
         <div className="text-center border-b-2 border-black pb-6">
-          <p className="text-xl font-bold">KL UNIVERSITY</p>
+          <p className="text-xl font-bold">NOVA UNIVERSITY</p>
           <p className="text-sm">OFFICIAL MARKSHEET</p>
           <p className="text-xs text-gray-600 mt-2">This is an official academic record</p>
         </div>

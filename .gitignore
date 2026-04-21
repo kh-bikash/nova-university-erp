@@ -33,3 +33,12 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# logs & temp files
+*.log
+*.txt
+*.dump
+*.png
+
+# dist (compiled workers output)
+/dist

@@ -37,10 +37,10 @@ export default function LoginPage() {
     <Card className="p-8 border border-border/50 shadow-lg">
       <div className="text-center mb-8">
         <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-          <span className="text-primary-foreground text-3xl font-bold">KL</span>
+          <span className="text-primary-foreground text-3xl font-bold">NU</span>
         </div>
         <h1 className="text-3xl font-bold text-foreground">Welcome Back</h1>
-        <p className="text-muted-foreground mt-2">KL University ERP System</p>
+        <p className="text-muted-foreground mt-2">Nova University ERP System</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">

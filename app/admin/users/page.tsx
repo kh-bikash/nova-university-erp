@@ -243,7 +243,7 @@ function UsersPageContent() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="user@kluniversity.edu"
+                    placeholder="user@novauniversity.edu"
                   />
                 </div>
                 <div>

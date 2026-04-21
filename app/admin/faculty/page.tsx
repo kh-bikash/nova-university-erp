@@ -225,7 +225,7 @@ function FacultyManagementContent() {
                   <Input
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="faculty@kluniversity.edu"
+                    placeholder="faculty@novauniversity.edu"
                     type="email"
                   />
                 </div>
