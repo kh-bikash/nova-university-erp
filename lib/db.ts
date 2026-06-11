@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production') {
   pool = new Pool({
     connectionString,
     ssl: {
-      rejectUnauthorized: false // Required for some Vercel/Supabase setups
+      rejectUnauthorized: false // Required for some Vercel/Neon setups
     }
   })
 } else {
