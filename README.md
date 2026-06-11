@@ -2,52 +2,77 @@
 
 # 🎓 Nova University ERP
 
-**Next-Generation University Management System**
+<!-- Beautiful Animated Logo Banner -->
+<img src="./public/animated-logo.svg" width="100%" alt="Nova University ERP Animated Banner" />
 
-A modern, fast, and scalable ERP platform built to digitize and automate academic institutions.
+<br/>
+
+**Next-Generation University Management System**  
+*A modern, fast, and scalable ERP platform built to digitize and automate academic institutions.*
 
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-🌐 [**Live Demo**](https://nova-university-erp.vercel.app/) • 📚 [**Documentation**](#-getting-started) • 🚀 [**Deploy**](#-deployment)
-
-<img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1600&auto=format&fit=crop" width="100%" alt="Nova University Cover" style="border-radius: 12px; margin-top: 20px;" />
+🌐 [**Live Demo**](https://nova-university-erp.vercel.app/) • 📚 [**Setup Instructions**](#-getting-started) • 🏛️ [**Admin Credentials**](#-quick-credentials)
 
 </div>
 
 ---
 
-## 🚀 Overview
+## 🔒 Quick Credentials
 
-**Nova University ERP** is a full-stack, production-ready Enterprise Resource Planning system designed specifically for universities and colleges. It brings all academic, administrative, financial, and campus operations into a single, unified, and highly secure platform. 
+To log in or test the administrative controls of the ERP system:
 
-Built with the latest web technologies, it offers a blazing-fast user experience and a beautiful, intuitive interface.
+| Role | Email | Password | Admin Secret (For Registration) |
+|---|---|---|---|
+| **Admin** | `admin32@gmail.com` | `admin123` *(or your registered pass)* | **`admin123`** |
+| **Student** | `student@gmail.com` | `student123` | *None* |
+| **Faculty** | `faculty@gmail.com` | `faculty123` | *None* |
+
+> ⚠️ **IMPORTANT:** When signing up a new **Admin** account, make sure to select the **Admin** role in the dropdown and enter the admin secret: **`admin123`** in the secret input field.
 
 ---
 
-## ✨ Key Features
+## 🚀 Overview
 
-### 👨‍🎓 For Students
-- **Dashboard**: Real-time attendance, grades, and CGPA tracking.
-- **Academics**: Course registration, automated timetables, and resource access.
-- **Finances**: Fee payments, invoicing, and detailed transaction history.
-- **Campus Life**: Hostel allocation, transport services, and library access.
+**Nova University ERP** is a full-stack, production-ready Enterprise Resource Planning system built on the **CorpScale Design System**. It implements strict data density, 4px/8px geometry bounds, and sub-200ms user interaction response times. 
 
-### 👩‍🏫 For Faculty
-- **Classroom**: Digital attendance marking and interactive class management.
-- **Academics**: Course scheduling and comprehensive timetable overview.
-- **Evaluation**: Marks entry, grading automation, and performance analytics.
-- **Resources**: Upload notes, assignments, quizzes, and exams seamlessly.
+It centralizes academics, administration, finance, and campus operations into a secure, RBAC-protected system.
 
-### 🏛️ For Administration
-- **Security**: Robust Role-Based Access Control (Admin, Faculty, Student, Parent).
-- **Analytics**: Deep academic and financial insights with visual dashboards.
-- **Management**: Streamlined department, faculty, and student onboarding.
-- **Operations**: Hostel, transport, inventory, and complaints modules.
-- **Communication**: System-wide announcements, notifications, and settings.
+---
+
+## ✨ Key Modules
+
+<details>
+<summary><b>👨‍🎓 Student Portal (Click to Expand)</b></summary>
+<br/>
+
+- **Academic Ledger**: Track semester GPA, grades, credits, and registration status.
+- **Attendance Ledger**: Live tracking of class attendance records.
+- **Finances Ledger**: Direct invoice listings and "Quick Pay" payment simulator.
+- **Infrastructure**: Hostel allocation, transport route trackers, and library collections.
+</details>
+
+<details>
+<summary><b>👩‍🏫 Faculty Portal (Click to Expand)</b></summary>
+<br/>
+
+- **Attendance Marker**: Easily toggle student presence statuses with immediate UI calculations.
+- **Academic Timetable**: Structured layouts of daily classes and assignments.
+- **Grading Suite**: Enter marks, upload course syllabus materials, and submit transcripts.
+</details>
+
+<details>
+<summary><b>🏛️ System Administration (Click to Expand)</b></summary>
+<br/>
+
+- **Cryptographic Security**: Custom Role-Based Access Controls (RBAC) backed by JWT tokens.
+- **Unified Registries**: Onboard students, faculty members, and assign departments.
+- **System Metrics**: Visual metrics on GPA averages, registration trends, and resource usages.
+</details>
 
 ---
 
@@ -55,40 +80,41 @@ Built with the latest web technologies, it offers a blazing-fast user experience
 
 | Layer | Technology |
 |-------|------------|
-| **Frontend** | Next.js 14 (App Router), React 18, Tailwind CSS |
-| **Backend** | Next.js API Routes, Server Actions, Node.js |
-| **Database** | PostgreSQL, Neon (Hosting) |
-| **Auth** | Custom RBAC, JWT (JSON Web Tokens) |
-| **Caching/Queue**| Redis (Upstash), BullMQ |
-| **UI Components**| ShadCN UI, Radix UI, Lucide Icons, Framer Motion |
-| **Deployment** | Vercel |
+| **Frontend Framework** | Next.js 14 (App Router), React 18 |
+| **Styling Engine** | Tailwind CSS v4, Custom HSL CorpScale Design variables |
+| **Database Server** | PostgreSQL, Neon serverless pooler (with `sslmode` and `channel_binding`) |
+| **Caching & Queues**| Redis (Upstash), BullMQ for background workers |
+| **Authentication** | JSON Web Tokens (JWT) + custom cookies storage |
+| **UI Component Base**| Radix UI, Shadcn UI, Lucide Icons |
 
 ---
 
-## 🖼️ Gallery
+## 🖼️ User Interface Gallery
 
 <div align="center">
-  <img src="./tt.png" alt="Main Dashboard" width="100%" style="border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-  <i>The unified student dashboard showing analytics and quick actions.</i>
+  <img src="./tt.png" alt="Main Dashboard Mock" width="100%" style="border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;" />
+  <br/>
+  <p align="center"><i>Interactive Student Grades Ledger and Attendance dashboards</i></p>
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./trial.png" alt="Admin Controls" width="100%" style="border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
-  <i>Comprehensive administrative controls and system-wide settings.</i>
+  <img src="./trial.png" alt="Admin Settings Panel" width="100%" style="border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;" />
+  <br/>
+  <p align="center"><i>System Administration panel and metrics dashboard</i></p>
 </div>
 
 ---
 
 ## ⚙️ Getting Started
 
-Follow these instructions to get the project up and running on your local machine.
+Follow these steps to set up a local development workspace:
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- [PostgreSQL](https://www.postgresql.org/) database (Local or hosted like [Neon](https://neon.tech/))
-- [Redis](https://redis.io/) instance (Local or hosted like [Upstash](https://upstash.com/))
+- **Node.js** v18+
+- **PostgreSQL** database (e.g. [Neon](https://neon.tech/))
+- **Redis** instance (e.g. [Upstash](https://upstash.com/))
 
 ### Installation
 
@@ -98,39 +124,36 @@ Follow these instructions to get the project up and running on your local machin
    cd nova-university-erp
    ```
 
-2. **Install dependencies**
+2. **Install node dependencies**
    ```bash
    npm install
    ```
 
-3. **Configure Environment Variables**
-   Copy the example environment file and fill in your details:
+3. **Configure environment variables**
+   Copy the example environment settings:
    ```bash
    cp .env.example .env
    ```
-   > 💡 *Make sure to set `DATABASE_URL` and `REDIS_URL` correctly.*
+   Configure `DATABASE_URL` (using your Neon pooler string) and `REDIS_URL` in `.env`.
 
-4. **Initialize the Database**
-   Run the migration script to create the necessary tables:
+4. **Initialize tables & seed data**
+   Run the db migration scripts to set up the schemas:
    ```bash
    npm run migrate
    ```
-   *(Alternatively, run the SQL script manually: `psql "${env:DATABASE_URL}" -f scripts/01-create-tables.sql`)*
 
-5. **Start the Development Server**
+5. **Start development server**
    ```bash
    npm run dev
    ```
 
-Your app should now be running on [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000) to view the application!
 
 ---
 
 ## 🗄️ Background Workers
 
-This project uses BullMQ for background task processing (e.g., automated attendance compilation, notification dispatching).
-
-To start the worker in development:
+To run background processes (e.g. compiling student attendance ledgers):
 ```bash
 npm run worker:attendance
 ```
@@ -139,20 +162,15 @@ npm run worker:attendance
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+We welcome structural improvements and bug fixes.
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/NewFeature`).
+3. Commit your changes (`git commit -m 'feat: add new module'`).
+4. Push to origin (`git push origin feature/NewFeature`).
+5. Open a Pull Request for review.
 
 ---
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/kh-bikash">Bikash</a>
+  Made with 💙 by <a href="https://github.com/kh-bikash">Bikash</a> using the CorpScale Design Specification.
 </p>
