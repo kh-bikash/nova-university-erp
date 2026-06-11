@@ -49,7 +49,7 @@ export default function SignupPage() {
   return (
     <Card className="p-8 border border-border/50 shadow-lg">
       <div className="text-center mb-8">
-        <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-primary rounded-md flex items-center justify-center mx-auto mb-4">
           <span className="text-primary-foreground text-3xl font-bold">NU</span>
         </div>
         <h1 className="text-3xl font-bold text-foreground">Create Account</h1>
